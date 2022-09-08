@@ -194,8 +194,10 @@ var users = [
 
 // CODE HERE 
 const getUserById = (user, id, cb) => {
-
+  let id = user.id;
+  
 }
+
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
