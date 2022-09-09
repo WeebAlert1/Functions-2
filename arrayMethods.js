@@ -137,6 +137,7 @@ const bobsTotal = purchases.reduce((acc, curr) => {
   }
   return acc;
 
-  console.log(bobsTotal);
 
 }, 0)
+
+console.log(bobsTotal);
