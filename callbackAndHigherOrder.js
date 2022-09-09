@@ -193,8 +193,10 @@ var users = [
 // Do not edit the code above.
 
 // CODE HERE 
-const getUserById = (user, id, cb) => {
-  let id = user.id;
+const getUserById = (user, id, cd) => {
+  for(i = 0; i < user.length; i++){
+    
+  }
   
 }
 

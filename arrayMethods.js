@@ -18,8 +18,15 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 // CODE HERE
-const evenNumbers = mixedNumbers.filter(element => element %2 === 0);
+const evenNumbers = mixedNumbers.filter(num => num %2 === 0);
 
+/* const evenNumbers = mixedNumbers.filter((number) => {
+  if(numnber % 2 === 0){
+    return true
+  } else {
+    return false
+  }
+}) */
 console.log(evenNumbers);
 
 ////////// PROBLEM 2 //////////
@@ -39,7 +46,7 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 */
 
 // CODE HERE
-const postTaxPrices = prices.map(num => num * 1.07);
+const postTaxPrices = prices.map((price) => Number(price * 1.07).toFixed(2));
 
 
 
@@ -82,9 +89,12 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-const myStrongest = monstersInYourPocket.filter(element => element > 200);
+const myStrongest = monstersInYourPocket.filter((monster) => {
+ return monster.CP > 200
+})
 
-console.log(myStrongest);
+// or const myStrongest = monsterInYourPocket.filter((monster) => monster.CP > 200);
+
 
 ////////// PROBLEM 5 //////////
 
@@ -100,7 +110,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 */
 
 // CODE HERE
-
+const taxedOrders = orders.map((order) => order.price * (1+order.tax));
 
 
 ////////// PROBLEM 6 //////////
@@ -120,3 +130,13 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+
+const bobsTotal = purchases.reduce((acc, curr) => {
+  if(curr.owner === 'Bob'){
+    acc += curr.price;
+  }
+  return acc;
+
+  console.log(bobsTotal);
+
+}, 0)
